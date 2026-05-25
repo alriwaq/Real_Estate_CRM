@@ -169,6 +169,8 @@ import LeadsIcon from '@/components/Icons/LeadsIcon.vue'
 import DealsIcon from '@/components/Icons/DealsIcon.vue'
 import ContactsIcon from '@/components/Icons/ContactsIcon.vue'
 import OrganizationsIcon from '@/components/Icons/OrganizationsIcon.vue'
+import ProjectsIcon from '@/components/Icons/ProjectsIcon.vue'
+import UnitsIcon from '@/components/Icons/UnitsIcon.vue'
 import NoteIcon from '@/components/Icons/NoteIcon.vue'
 import TaskIcon from '@/components/Icons/TaskIcon.vue'
 import PhoneIcon from '@/components/Icons/PhoneIcon.vue'
@@ -259,6 +261,16 @@ const links = [
     icon: PhoneIcon,
     to: 'Call Logs',
   },
+  {
+    label: 'Projects',
+    icon: ProjectsIcon,
+    to: 'Projects',
+  },
+  {
+    label: 'Units',
+    icon: UnitsIcon,
+    to: 'Units',
+  },
 ]
 
 const allViews = computed(() => {
@@ -323,6 +335,10 @@ function getIcon(routeName, icon) {
       return NoteIcon
     case 'Call Logs':
       return PhoneIcon
+    case 'Projects':
+      return ProjectsIcon
+    case 'Units':
+      return UnitsIcon
     default:
       return PinIcon
   }

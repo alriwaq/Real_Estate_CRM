@@ -85,6 +85,30 @@ const routes = [
     component: () => import('@/pages/CallLogs.vue'),
   },
   {
+    alias: '/projects',
+    path: '/projects/view/:viewType?',
+    name: 'Projects',
+    component: () => import('@/pages/Projects.vue'),
+  },
+  {
+    path: '/projects/:projectId',
+    name: 'Project',
+    component: () => import('@/pages/Project.vue'),
+    props: true,
+  },
+  {
+    alias: '/units',
+    path: '/units/view/:viewType?',
+    name: 'Units',
+    component: () => import('@/pages/Units.vue'),
+  },
+  {
+    path: '/units/:unitId',
+    name: 'Unit',
+    component: () => import('@/pages/Unit.vue'),
+    props: true,
+  },
+  {
     path: '/data-import',
     name: 'DataImportList',
     component: () => import('@/pages/DataImport.vue'),
